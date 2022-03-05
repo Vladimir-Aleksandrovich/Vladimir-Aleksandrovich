@@ -31,7 +31,6 @@ app.get('/', (req, res) => {
 app.post('/addressbook', (req, res) => {
   const dataFromForm = req.body
   db.posts.push(dataFromForm)
-  // res.send('ok')
   res.redirect('/')
 })
 app.get('*', (req, res) => {
