@@ -1,0 +1,27 @@
+<class = "d-flex justify-content-center">
+<form class="d-flex flex-column align-items-center" action="/postbook" method="POST">
+<div class="mb-3">
+    <input name="pic" placeholder = "Введит url картинки" type="text" class="form-control">
+  </div>
+  <div class="mb-3">
+    <input name="text" placeholder = "Ведите текст поста" type="text" class="form-control">
+    </div>
+  <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+
+
+
+
+
+
+<section class= "d-flex flex-column align-items-center" >
+    {{#each listOfPosts}}
+<div class="card my-3"  style="width: 18rem;">
+  <img src="{{this.pic}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class = "card-phone">{{this.text}}</p>
+   </div>
+   <button data-delete type="button" class="btn btn-danger">Удалить пост</button>
+</div>
+{{/each}}
+</section>

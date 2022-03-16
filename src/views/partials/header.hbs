@@ -1,0 +1,22 @@
+<nav>
+    <ul>
+        <li>
+          <a href="/">Main</a>
+        </li>
+        <li>
+            <a href="/instagram">Instagram</a>
+        </li>
+        {{#if name}}
+        <li>
+            <a href="/auth/signout">SignOut</a>
+        </li>
+        {{else}}
+        <li>
+            <a href="/auth/signup">SignUp</a>
+        </li>
+        <li>
+            <a href="/auth/signin">SignIn</a>
+        </li>
+        {{/if}}
+    </ul>
+</nav>
